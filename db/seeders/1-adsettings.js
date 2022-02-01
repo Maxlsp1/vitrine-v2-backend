@@ -8,19 +8,19 @@ let cryptoToken = suid(16);
  *  In second time them populate Settings Table.
  */
 
-let pass = SecurePass.encrypted('Roldap2016', cryptoToken)
-let userName = SecurePass.encrypted('roldap@iut-tarbes.local', cryptoToken)
+let pass = SecurePass.encrypted('xxxxxxxxxxx', cryptoToken)
+let userName = SecurePass.encrypted('xxxxxxxxxxx', cryptoToken)
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
      try {
 
         await queryInterface.bulkInsert('AdSettings', [{
-          Ldap_url: 'ldaps://ad1-peda.iut-tarbes.local:636',
-          baseDNStaffUser:'OU=Personnels,DC=iut-tarbes,DC=local',
-          baseDNStaffGroup:'OU=Groupes_Securite_Administration,DC=iut-tarbes,DC=local',
-          baseDNStudentUser:'OU=Etudiants,DC=iut-tarbes,DC=local',
-          baseDNStudentGroup:'OU=Groupes_Securite,DC=iut-tarbes,DC=local',
+          Ldap_url: 'xxxxxxxxxxx',
+          baseDNStaffUser:'xxxxxxxxxxx',
+          baseDNStaffGroup:'xxxxxxxxxxx',
+          baseDNStudentUser:'xxxxxxxxxxx',
+          baseDNStudentGroup:'xxxxxxxxxxx',
           Ldap_username: userName,
           Ldap_pass: pass,
           Token: cryptoToken

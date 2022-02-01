@@ -19,7 +19,7 @@
   },
   "production": {
     "username": "root",
-    "password": "FTZ/dayeg70",
+    "password": "xxxxxxxxx",
     "database": "IT_res_db",
     "host": "localhost",
     "dialect": "mariadb",

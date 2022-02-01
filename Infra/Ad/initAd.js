@@ -93,12 +93,12 @@ async function initAuthAd(db){
           url: serverSet.Ldap_url,
 
           //path to Admin (use to granted ldap access)
-          bindDN: 'CN=roldap,OU=Autres,OU=Comptes,DC=iut-tarbes,DC=local',
+          bindDN: 'xxxxxxxxxx',
           //Admin pwd
           bindCredentials: serverSet.Ldap_pass,
 
           //request search params
-          searchBase: 'DC=iut-tarbes,DC=local',
+          searchBase: 'xxxxxxxxxxxx',
           searchFilter: '(sAMAccountName={{username}})',
 
           //Display  user data

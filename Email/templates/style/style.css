@@ -1,0 +1,19 @@
+html {
+  height: 100%;
+  width: 100%;
+  padding: none !important;
+  margin: none !important;
+  background-color: #181818;
+  color: #fff;
+  font-family: cursive;
+  font-size: 17px;
+  text-align: center;
+}
+
+.ImageContainer {
+  text-align: center;
+}
+
+.LogoContainer {
+  width: 250px;
+}

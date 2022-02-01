@@ -1,0 +1,22 @@
+stages:
+  - build
+  - deploy
+
+job:build:
+  stage: build
+  script: 
+    - cd /var/www/project-management-backend
+    - git pull origin master &&  yarn install
+    - yarn update_db
+  only:
+    - master
+
+
+job:deploy:
+  stage: deploy
+
+  script:
+    - cd /var/www/project-management-backend
+    - pm2 restart server.js
+  only:
+    - master

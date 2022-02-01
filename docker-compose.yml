@@ -1,0 +1,30 @@
+version: '3.2'
+
+services:
+   db:
+      image: mysql:8.0
+      container_name: IT_res_db
+      restart: always
+      ports:
+       - '6603:3306'
+      command: --init-file /data/application/init.sql
+      volumes:
+        - ./init.sql:/data/application/init.sql
+      environment:
+        MYSQL_ROOT_USER: root
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: IT_res_db
+        MYSQL_USER: admin
+        MYSQL_PASSWORD: admin
+
+   app:
+      depends_on:
+       - db
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin_IT_res_db
+      restart: always
+      ports:
+       - '8080:80'
+      environment:
+        PMA_HOST: db
+        UPLOAD_LIMIT: 300M

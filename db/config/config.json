@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "admin",
+    "database": "IT_res_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 6603, 
+    "ssl": true
+  },
+  "test": {
+    "username": "admin",
+    "password": "admin",
+    "database": "IT_res_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 6603,
+    "ssl": true
+  },
+  "production": {
+    "username": "root",
+    "password": "FTZ/dayeg70",
+    "database": "IT_res_db",
+    "host": "localhost",
+    "dialect": "mariadb",
+    "port": 3306,
+    "ssl": true
+  }
+}
